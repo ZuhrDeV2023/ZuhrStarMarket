@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-Catalog{
+    /* display: flex; */
+    width: 120px;
+    height: 40px;
+}
+
+.box-Navs{
+    max-width: 1920px !important;
+}
+
+.line {
+    font-family: 'Wendy One', sans-serif;
+    color:  black !important;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    left:  0px;
+    transform: scaleX(0);
+    background: black ;
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-out;
+  }
+  
+  .line:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
