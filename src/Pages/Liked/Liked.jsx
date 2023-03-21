@@ -79,7 +79,11 @@ const Liked = () => {
 									<Link to={"/single/" + element.id}>
 										<div>
 											<p className="mt-1 text-xs rounded-lg">{element.description}</p>
-											<p className="mt-2 text-xs">{element.price} 0 so'm</p>
+											<p className="mt-2 text-xs">
+												<span className="bg-yellow-400">
+													{element.price} 0 so'm
+												</span>
+												</p>
 										</div>
 									</Link>
 									<img

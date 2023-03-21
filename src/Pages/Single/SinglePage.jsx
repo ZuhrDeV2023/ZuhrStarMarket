@@ -153,7 +153,7 @@ const SinglePage = () => {
 						<div className="mt-4">
 							<p className="text-xs">Price:</p>
 							<div className="flex items-center gap-6">
-								<h1 className="text-sm font-medium">{product.price + Number(price)} 0 so'm</h1>
+								<h1 className="font-medium text-normal">{product.price + Number(price)} 0 so'm</h1>
 								<p className="text-xs line-through">5523 000 so'm</p>
 							</div>
 						</div>

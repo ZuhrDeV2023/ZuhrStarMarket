@@ -104,13 +104,16 @@ const PromotionWeek = () => {
 									<div className="flex items-center justify-between">
 										<Link to={"/single/" + element.id}>
 											<div>
-												<p className="mt-1 text-xs rounded-lg">{element.description}</p>
-												<p className="mt-2 text-xs">{element.price} 0 soum</p>
+												<p className="p-1 mt-1 text-xs rounded-lg">{element.description}</p>
+												<p className="mt-2 text-xs ">
+													<span className="px-1 bg-yellow-300">
+														{element.price} 0 soum
+													</span></p>
 											</div>
 										</Link>
 										<img
 											onClick={() => basketHandler(element)}
-											className="absolute w-4 duration-200 ease-in-out right-3 bottom-3 hover:w-5"
+											className="absolute w-4 pt-1 duration-200 ease-in-out right-3 bottom-3 hover:w-5"
 											src={basketIcon}
 											alt=""
 										/>

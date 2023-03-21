@@ -19,7 +19,6 @@ const Home = () => {
 			<Categories categoryName={"Shoes"} />
 			<Categories categoryName={"Furniture"} />
 			<Advertising image={advertising_2} />
-			{/* <Categories categoryName={"nuevo"} /> */}
 			<Categories categoryName={"Others"} />
 			<Advertising image={advertising_3} />
 

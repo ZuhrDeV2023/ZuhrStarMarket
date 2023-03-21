@@ -6,7 +6,7 @@ import TopHeader from "../Header/TopHeader/TopHeader";
 
 const Layout = ({ children }) => {
 	return (
-		<div className="mx-auto ">
+		<div className="container mx-auto">
 			<TopHeader />
 			<Header />
 			<CategoryBar />

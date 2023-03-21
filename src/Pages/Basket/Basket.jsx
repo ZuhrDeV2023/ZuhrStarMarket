@@ -24,7 +24,9 @@ const Basket = () => {
 
 		if (!hasProduct) {
 			dispatch(add(product));
-		} else {
+		} 
+		
+		else {
 			dispatch(remove(product));
 		}
 	};
@@ -40,7 +42,9 @@ const Basket = () => {
 
 		if (!hasProduct) {
 			dispatch(addBasket(product));
-		} else {
+		} 
+		
+		else {
 			dispatch(removeBasket(product));
 		}
 	};
@@ -79,7 +83,11 @@ const Basket = () => {
 									<Link to={"/single/" + element.id}>
 										<div>
 											<p className="mt-1 text-xs rounded-lg">{element.description}</p>
-											<p className="mt-2 text-xs">{element.price} 0 soum</p>
+											<p className="mt-2 text-xs">
+												<span className="bg-yellow-400">
+													{element.price} 0 soum		
+												</span>
+											</p>
 										</div>
 									</Link>
 									<img

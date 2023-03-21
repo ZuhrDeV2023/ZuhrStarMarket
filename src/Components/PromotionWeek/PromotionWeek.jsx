@@ -74,26 +74,17 @@ const PromotionWeek = () => {
 				<h1 className="text-xl font-medium ">Promotions of the week</h1>
 				<img className="w-3 mt-1 ml-5" src={rightVector} alt="" />
 			</div>
-
 			{isLoading ? (
 				<PromotionLoading />
 			) : (
 				<div className="container flex flex-row flex-wrap justify-between mx-auto ">
 					{data.slice(1, limitProduct).map((element) => (
-						<div
-							key={element.id}
-							className="relative w-48 mb-10 duration-300 ease-in-out bg-white rounded-lg cursor-pointer hover:drop-shadow-md h-96"
-						>
+						<div key={element.id} className="relative w-48 mb-10 duration-300 ease-in-out bg-white rounded-lg cursor-pointer hover:drop-shadow-md h-96" >
 							<div>
 								<Link to={"/single/" + element.id}>
 									<img className="w-48 p-0 rounded h-60" src={element.images} alt="img" />
 								</Link>
-								<img
-									onClick={() => likeHandler(element)}
-									className="absolute w-4 duration-200 ease-in-out right-3 top-3 hover:w-5"
-									src={likeIcon}
-									alt=""
-								/>
+								<img onClick={() => likeHandler(element)} className="absolute w-4 duration-200 ease-in-out right-3 top-3 hover:w-5" src={likeIcon} alt="" />
 							</div>
 
 							<div className="container p-3 mx-auto w-50">
@@ -102,7 +93,11 @@ const PromotionWeek = () => {
 									<Link to={"/single/" + element.id}>
 										<div>
 											<p className="mt-1 text-xs rounded-lg">{element.description}</p>
-											<p className="mt-2 text-xs">{element.price} 0 so'm</p>
+											<p className="mt-2 text-xs">
+												<span className="bg-yellow-400">
+													{element.price} 000 so'm
+												</span>
+											</p>
 										</div>
 									</Link>
 									<img

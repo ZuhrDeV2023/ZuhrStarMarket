@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import ElectronicsLoading from "../Loading/ElectronicsLoading/ElectronicsLoading";
 
-import { BASE_URL } from "../../API/BASE_URL";
+// import { BASE_URL } from "../../API/BASE_URL";
 
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -68,7 +68,7 @@ export default ({ categoryName }) => {
 	};
 
 	useEffect(() => {
-		fetch(BASE_URL + "products/")
+		fetch("https://api.umarket.uz" + "products/")
 			.then((res) => res.json())
 			.then((data) => {
 				setData(data);
@@ -111,21 +111,19 @@ export default ({ categoryName }) => {
 										<Link to={"/single/" + element.id}>
 											<img className="w-48 p-0 rounded h-60" src={element.images} alt="img" />
 										</Link>
-										<img
-											onClick={() => likeHandler(element)}
-											className="absolute w-4 duration-200 ease-in-out right-3 top-3 hover:w-5"
-											src={likeIcon}
-											alt=""
-										/>
+										<img onClick={() => likeHandler(element)} className="absolute w-4 duration-200 ease-in-out right-3 top-3 hover:w-5" src={likeIcon} alt="" />
 									</div>
-
 									<div className="container p-3 mx-auto w-50">
 										<p className="text-xs font-medium">{element.title}</p>
 										<div className="flex items-center justify-between">
 											<Link to={"/single/" + element.id}>
 												<div>
 													<p className="mt-1 text-xs rounded-lg">{element.description}</p>
-													<p className="mt-2 text-xs">{element.price} 0 so'm</p>
+													<p className="mt-2 text-xs">
+														<span className="bg-yellow-400">
+															{element.price} 000 so'm
+														</span>
+													</p>
 												</div>
 											</Link>
 											<img
@@ -165,7 +163,9 @@ export default ({ categoryName }) => {
 											<Link to={"/single/" + element.id}>
 												<div>
 													<p className="mt-1 text-xs rounded-lg">{element.description}</p>
-													<p className="mt-2 text-xs">{element.price} 0 so'm</p>
+													<p className="mt-2 text-xs">
+														{element.price} 0 so'm
+													</p>
 												</div>
 											</Link>
 											<img
